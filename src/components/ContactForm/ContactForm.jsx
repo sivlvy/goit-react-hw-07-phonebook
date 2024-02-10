@@ -17,7 +17,9 @@ export const ContactForm = () => {
 
 	const handleSubmit = (newContact, { resetForm }) => {
 		const inContact = isContactDublicate(contacts, newContact);
-		if (inContact) {
+		console.log(inContact);
+
+		if (!inContact) {
 			dispatch(addContactsThunk(newContact));
 			resetForm();
 		}

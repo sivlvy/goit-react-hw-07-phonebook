@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-const API_KEY = '65c60677e5b94dfca2e0ca23';
+const API_KEY = '65c65c8fe5b94dfca2e16d4b';
 const END_POINT = 'contacts';
 
-axios.defaults.baseURL = `https://${API_KEY}.mockapi.io`;
+axios.defaults.baseURL = `https://${API_KEY}.mockapi.io/contacts`;
 
 export const getContacts = async () => {
 	const { data } = await axios.get(`/${END_POINT}`);
@@ -17,6 +17,6 @@ export const addContacts = async contact => {
 };
 
 export const deleteContacts = async id => {
-	const { data } = await axios.delete(`/${END_POINT}`, id);
+	const { data } = await axios.delete(`/${END_POINT}/${id}`);
 	return data;
 };

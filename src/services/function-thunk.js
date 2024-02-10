@@ -10,12 +10,11 @@ const arrThunk = [addContactsThunk, deleteContactsThunk, getContactsThunk];
 export const appendThunk = type => arrThunk.map(thunk => thunk[type]);
 
 export const STATUS = {
-	IDLE: 'IDLE',
-	PENDING: 'PENDING',
-	REJECTED: 'REJECTED',
-	FULFILLED: 'FULFILLED',
+	IDLE: 'idle',
+	PENDING: 'pending',
+	REJECTED: 'rejected',
+	FULFILLED: 'fulfilled',
 };
-
 export function handlePending({ contacts }) {
 	contacts.status = STATUS.PENDING;
 }
