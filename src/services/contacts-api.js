@@ -20,3 +20,4 @@ export const deleteContacts = async id => {
 	const { data } = await axios.delete(`/${END_POINT}/${id}`);
 	return data;
 };
+adsdsa;
